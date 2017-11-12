@@ -12,7 +12,7 @@ func HelloWorld(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	fmt.Printf("Starting Hello World application... \n")
+	fmt.Printf("Starting Hello Container Pipelines application... \n")
 	http.HandleFunc("/", HelloWorld)
 	http.ListenAndServe(":8080", handlers.LoggingHandler(os.Stdout, http.DefaultServeMux))
 }
